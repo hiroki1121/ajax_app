@@ -27,14 +27,14 @@ function post (){
     // openでリクエストの内容を指定
     // 非同期通信でcreateアクションに送信する
     // trueで非同期通信（falseなら同期通信）
-    XHR.open("POST", "/posts", true)
+    XHR.open("POST", "/posts", true);
     // レスポンスのフォーマットを指定
     XHR.responseType = "json";
     // フォームに入力された内容をサーバー側に送信
     XHR.send(formData);
     // レスポンスの受信に成功したときの処理
     XHR.onload = () => {
-      if (XHR.status != 200) {
+      if (XHR.status != 200) { 
         alert(`Error ${XHR.status}: ${XHR.statusText}`);
         return null;
       }
